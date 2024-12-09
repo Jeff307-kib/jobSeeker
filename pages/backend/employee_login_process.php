@@ -32,7 +32,7 @@
     
                 if($result->num_rows === 1){
                     $row = $result->fetch_assoc();
-                    /*Storing data in the session to use when appropriate*/
+                    /*Storing data in the session to use when appropriate*/ 
                     if(password_verify($userpassword, $row['password'])){
                         $_SESSION['user_name'] = $row['user_name'];
                         $_SESSION['user_id'] = $row['user_id'];
