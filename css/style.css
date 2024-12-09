@@ -4,5 +4,40 @@
 
 
 .user-form {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    background-image: url(https://www.wellable.co/blog/wp-content/uploads/2022/12/Employee-Engagement.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: initial;
+}
+
+
+#entry-btn:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+@media (min-width:992px){
+
+}
+
+@media (min-width:576px) and (max-width: 991px){
+
+}
+
+@media (max-width:575px){
+
 }
