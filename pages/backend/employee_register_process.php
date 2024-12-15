@@ -1,4 +1,4 @@
-<?php
+ <?php
     session_start();
     include('confs\config.php');
 
@@ -17,10 +17,10 @@
 
         /*Checking Email format*/
         if(empty($_POST["email_address"])){
-            $errors["email_address"] = "Email address is required!";
+            $errors["email"] = "Email address is required!";
         }
         else if(!preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $_POST["email_address"]) ){
-            $errors["email_address"] = "Invaid Email. Please enter the valid email address.";
+            $errors["email"] = "Invaid Email. Please enter the valid email address.";
         }
         else 
         {
@@ -59,8 +59,9 @@
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("s",$useremail);
             $stmt->execute();
+            $result = $stmt->get_result();
 
-            if($stmt->num_rows > 0){
+            if($result->num_rows > 0){
                 $_SESSION['errors']['email'] = "This email is already registered!";
                 header('location: ../employee_register.php');
                 exit;
@@ -75,6 +76,15 @@
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sss", $username, $useremail, $userpassword);
             if($stmt->execute()){
+
+                //Get the last inserted id which would be the user_id
+                $user_id = $conn->insert_id;
+
+                $_SESSION['user_id'] = $user_id;
+                $_SESSION['user_email'] = $useremail;
+                $_SESSION['user_name'] = $username;
+                $_SESSION['logged_in'] = true;
+
                 $stmt->close();
                 header('location: ../../index.php');
                 exit;

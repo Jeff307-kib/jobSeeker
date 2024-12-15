@@ -39,14 +39,14 @@
       </div>
       <div class="form-floating mb-3">
         <input 
-          type="email" 
+          type="text" 
           class="form-control" 
           id="email_address" 
           name="email_address" 
           placeholder="Email Address">
         <label for="email_address">Email Address</label>
-        <?php if(isset($_SESSION['errors']['email_address'])): ?>
-          <p class='text-danger fw-semibold'><?= $_SESSION['errors']['email_address'] ?></p>
+        <?php if(isset($_SESSION['errors']['email'])): ?>
+          <p class='text-danger fw-semibold'><?= $_SESSION['errors']['email'] ?></p>
         <?php
           unset($_SESSION['errors']); 
           endif;
