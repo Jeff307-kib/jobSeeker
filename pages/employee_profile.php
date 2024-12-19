@@ -63,7 +63,7 @@
             </div>
             <div class="col-3 d-flex flex-column align-items-end">
                 <div>
-                    <a href="#" type="btn" class="btn btn-success fs-5 fw-semibold" style="min-width:180px;">
+                    <a href="view_resume.php?id=<?php echo $row['user_id']; ?>" type="btn" class="btn btn-success fs-5 fw-semibold" style="min-width:180px;">
                         View Resume
                         <img src="../images/resume.png" alt="Edit Icon" class="ms-2 mb-1" style="width:24px;">
                     </a>

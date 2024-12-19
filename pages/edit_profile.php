@@ -11,26 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .goback{
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: rgba(102, 46, 155,0.4);
-            border-radius:50%;
-            padding: 4px;
-            cursor: pointer;
-        }
-
-        .help{
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: rgba(102, 46, 155,0.4);
-            border-radius:50%;
-            cursor:pointer;
-        }
-    </style>
 </head>
 <body>
     <?php

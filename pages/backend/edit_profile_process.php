@@ -24,7 +24,7 @@
         $row = $result->fetch_assoc();
         $stmt->close();
 
-        if(!empty($_POST['profile'])){
+        if(!empty($_FILES['profile']['name'])){
             $target = "../../uploads/";
             $image_name = basename($_FILES['profile']['name']);
             $tmp_name = $_FILES['profile']['tmp_name'];

@@ -102,6 +102,9 @@
           class="btn btn-success fs-5 fw-bold px-5" 
           id="entry-btn">
       </div>
+      <div class="mt-3">
+        Are you willing to hire employees? <a href="">Register as a employer.</a>
+      </div>
     </form>
   </div>
 </div>
